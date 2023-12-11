@@ -1,0 +1,13 @@
+﻿DROP table [dbo].[accomodations];
+Drop table [dbo].[bookings];
+drop table [dbo].[categories];
+drop table [dbo].[favorites];
+drop table [dbo].[history];
+drop table [dbo].[landmarks];
+drop table [dbo].[landmark_travel_note];
+drop table [dbo].[locations];
+drop table [dbo].[travel_notes];
+drop table [dbo].[reviews];
+drop table [dbo].[seasonal_prices];
+drop table [dbo].[users];
+drop table [dbo].[weathers];

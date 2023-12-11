@@ -1,0 +1,192 @@
+﻿.research {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+
+label {
+    display: inline-block;
+    width: 80px; /* Ширина метки (label) */
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 200px; /* Ширина текстового поля (input) */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+    input[type="text"]:focus {
+        outline: none;
+        border-color: #0066cc;
+        box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+    }
+
+
+.checkboxlist-wrapper {
+    margin-bottom: 10px;
+}
+
+.checkboxlist-label {
+    display: block;
+    font-weight: bold;
+}
+
+.dropdownlist-wrapper {
+    margin-bottom: 10px;
+}
+
+.radiobuttonlist-wrapper {
+    margin-bottom: 10px;
+}
+
+.textbox-wrapper {
+    margin-bottom: 10px;
+}
+
+.button-wrapper {
+    margin-top: 10px;
+}
+
+.filter-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .filter-button:hover {
+        background-color: #0069d9;
+    }
+
+
+.dropdownlist-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+    .dropdownlist-wrapper select {
+        width: 200px;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url('path/to/arrow-icon.png');
+        background-repeat: no-repeat;
+        background-position: right center;
+        cursor: pointer;
+    }
+
+        .dropdownlist-wrapper select:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+.radiobuttonlist-wrapper {
+    margin-bottom: 10px;
+    
+}
+
+.radiobuttonlist-label {
+    display: block;
+    width: 200px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.radiobuttonlist-wrapper input[type="radio"] {
+    display: none;
+}
+
+.radiobuttonlist-wrapper label {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 200px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .radiobuttonlist-wrapper label:hover {
+        background-color: #f0f0f0;
+    }
+
+.radiobuttonlist-wrapper input[type="radio"]:checked + label {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+.textbox-wrapper {
+    margin-bottom: 10px;
+}
+
+.textbox-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.textbox-wrapper input[type="text"] {
+    width: 50px;
+}
+
+.button-wrapper {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+.hotel-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.hotel-card {
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .hotel-card h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .hotel-card p {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+
+
+
+

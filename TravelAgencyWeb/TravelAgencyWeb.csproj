@@ -1,0 +1,382 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69AEC55D-6794-42FA-B00F-EA53F7A78A7A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TravelAgencyWeb</RootNamespace>
+    <AssemblyName>TravelAgencyWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44308</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin Pages\AdminCategory.aspx" />
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Table Scripts\createTables.sql" />
+    <Content Include="App_Data\Table Scripts\createTables.sql" />
+    <Content Include="App_Data\Table Scripts\deleteTables.sql" />
+    <Content Include="App_Data\Table Scripts\kasntantsinScript.sql" />
+    <Content Include="App_Data\Table Scripts\dePopulateTables.sql" />
+    <Content Include="App_Data\Table Scripts\rePopulateTables.sql" />
+    <Content Include="Images\Accomodations\airbnb3.jpg" />
+    <Content Include="Images\Accomodations\airbnb4.jpeg" />
+    <Content Include="Images\Accomodations\cabin5.jpg" />
+    <Content Include="Images\Accomodations\cabin6.jpg" />
+    <Content Include="Images\Accomodations\hotel1.jpg" />
+    <Content Include="Images\Landmarks\nipen.jpeg" />
+    <Content Include="Images\Landmarks\rexgarden.jpeg" />
+    <Content Include="Images\Landmarks\santabarbara.jpg" />
+    <Content Include="Images\Landmarks\ulriken.jpeg" />
+    <Content Include="Images\Locations\alicante.jpg" />
+    <Content Include="Images\Locations\bergen.jpeg" />
+    <Content Include="Images\Accomodations\hotel2.jpg" />
+    <Content Include="Images\Locations\madrid.jpg" />
+    <Content Include="Images\Locations\malaga.jpg" />
+    <Content Include="Images\Locations\murcia.jpg" />
+    <Content Include="Images\Locations\oslo.jpg" />
+    <Content Include="Images\Locations\stockholm.jpg" />
+    <Content Include="Images\Locations\sveio.jpg" />
+    <Content Include="Images\Locations\valencia.jpeg" />
+    <Content Include="Pages\css\accomodationBrow.css" />
+    <Content Include="Pages\Home.aspx" />
+    <Content Include="Admin Pages\AdminAccomodation.aspx" />
+    <Content Include="Admin Pages\AdminLandmark.aspx" />
+    <Content Include="Admin Pages\AdminLocation.aspx" />
+    <Content Include="Admin Pages\AdminSeasonalPricing.aspx" />
+    <Content Include="Admin Pages\AdminUser.aspx" />
+    <Content Include="App_Data\Table Scripts\deleteTables.sql" />
+    <Content Include="Pages\AccomodationBrowser.aspx" />
+    <Content Include="Pages\css\bootstrap-grid.min.css" />
+    <Content Include="Pages\css\bootstrap-reboot.min.css" />
+    <Content Include="Pages\css\style.min.css" />
+    <Content Include="Pages\Landmark.aspx" />
+    <Content Include="Pages\Location.aspx" />
+    <Content Include="Pages\Accomodation.aspx" />
+    <Content Include="Pages\LocationBrowser.aspx" />
+    <Content Include="Pages\Review.aspx" />
+    <Content Include="Pages\scss\style.css">
+      <DependentUpon>style.scss</DependentUpon>
+    </Content>
+    <Content Include="Pages\scss\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Pages\UserBooking.aspx" />
+    <Content Include="Pages\UserBookingHistory.aspx" />
+    <Content Include="Pages\UserFavorites.aspx" />
+    <Content Include="Pages\UserLogin.aspx" />
+    <Content Include="Pages\UserTravelNotes.aspx" />
+    <Content Include="Pages\UserProfile.aspx" />
+    <Content Include="Pages\UserRegistration.aspx" />
+    <Content Include="Pages\AddLandmark.aspx" />
+    <Content Include="Pages\UserReview.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Admin Pages\AdminStatistics.aspx" />
+    <Content Include="Admin Pages\AdminModification.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin Pages\AdminCategory.aspx.cs">
+      <DependentUpon>AdminCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\AdminCategory.aspx.designer.cs">
+      <DependentUpon>AdminCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserReview.aspx.cs">
+      <DependentUpon>UserReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserReview.aspx.designer.cs">
+      <DependentUpon>UserReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin Pages\AdminAccomodation.aspx.cs">
+      <DependentUpon>AdminAccomodation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\AdminAccomodation.aspx.designer.cs">
+      <DependentUpon>AdminAccomodation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Pages\AdminLandmark.aspx.cs">
+      <DependentUpon>AdminLandmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\AdminLandmark.aspx.designer.cs">
+      <DependentUpon>AdminLandmark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Pages\AdminLocation.aspx.cs">
+      <DependentUpon>AdminLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\AdminLocation.aspx.designer.cs">
+      <DependentUpon>AdminLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Pages\AdminSeasonalPricing.aspx.cs">
+      <DependentUpon>AdminSeasonalPricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\AdminSeasonalPricing.aspx.designer.cs">
+      <DependentUpon>AdminSeasonalPricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Pages\AdminUser.aspx.cs">
+      <DependentUpon>AdminUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\AdminUser.aspx.designer.cs">
+      <DependentUpon>AdminUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master Pages\Normal.Master.cs">
+      <DependentUpon>Normal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Pages\Normal.Master.designer.cs">
+      <DependentUpon>Normal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AccomodationBrowser.aspx.cs">
+      <DependentUpon>AccomodationBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AccomodationBrowser.aspx.designer.cs">
+      <DependentUpon>AccomodationBrowser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Landmark.aspx.cs">
+      <DependentUpon>Landmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Landmark.aspx.designer.cs">
+      <DependentUpon>Landmark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Location.aspx.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Location.aspx.designer.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Accomodation.aspx.cs">
+      <DependentUpon>Accomodation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accomodation.aspx.designer.cs">
+      <DependentUpon>Accomodation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LocationBrowser.aspx.cs">
+      <DependentUpon>LocationBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LocationBrowser.aspx.designer.cs">
+      <DependentUpon>LocationBrowser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Review.aspx.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Review.aspx.designer.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserBooking.aspx.cs">
+      <DependentUpon>UserBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserBooking.aspx.designer.cs">
+      <DependentUpon>UserBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserBookingHistory.aspx.cs">
+      <DependentUpon>UserBookingHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserBookingHistory.aspx.designer.cs">
+      <DependentUpon>UserBookingHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserFavorites.aspx.cs">
+      <DependentUpon>UserFavorites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserFavorites.aspx.designer.cs">
+      <DependentUpon>UserFavorites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserTravelNotes.aspx.cs">
+      <DependentUpon>UserTravelNotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserTravelNotes.aspx.designer.cs">
+      <DependentUpon>UserTravelNotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserRegistration.aspx.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserRegistration.aspx.designer.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddLandmark.aspx.cs">
+      <DependentUpon>AddLandmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddLandmark.aspx.designer.cs">
+      <DependentUpon>AddLandmark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin Pages\AdminStatistics.aspx.cs">
+      <DependentUpon>AdminStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\AdminStatistics.aspx.designer.cs">
+      <DependentUpon>AdminStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Pages\AdminModification.aspx.cs">
+      <DependentUpon>AdminModification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin Pages\AdminModification.aspx.designer.cs">
+      <DependentUpon>AdminModification.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master Pages\Normal.Master" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="Pages\scss\style.scss" />
+    <Content Include="Pages\css\style.min.css.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\library\library.csproj">
+      <Project>{a4d51e85-0d53-4718-a20b-446c854ce408}</Project>
+      <Name>library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55919</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44308/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Normal.master.cs" Inherits="TravelAgencyWeb.Normal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        .nav-menu-container.left {
+            float: left;
+        }
+
+        .nav-menu-container.right {
+            float: right;
+        }
+
+        .content-container {
+            clear: both;
+            margin-top: 30px;
+        }
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+      
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Container for the navigation menus -->
+        <div class="nav-menu-container">
+            <div class="nav-menu-container left">
+            <asp:Menu ID="NavigationMenu" runat="server" Orientation="Horizontal">
+                <items>
+                    <asp:MenuItem NavigateUrl="~/Pages/Home.aspx"
+                        text="Home" ToolTip="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Pages/AccomodationBrowser.aspx"
+                        text="Accomodations" ToolTip="Accomodations"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Pages/LocationBrowser.aspx"
+                        text="Locations" ToolTip="Locations"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Pages/Landmark.aspx"
+                        text="Landmarks" ToolTip="Landmarks"></asp:MenuItem>
+                </items>
+            </asp:Menu>
+            </div>
+
+            <div class="nav-menu-container right">
+            <asp:Menu ID="AdminNavigationMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" OnMenuItemClick="LogoutButton">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Admin Pages/AdminStatistics.aspx"
+                        text="Statistics" ToolTip="Statstics"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin Pages/AdminModification.aspx"
+                        text="Modification" ToolTip="Modification"></asp:MenuItem>
+                    <asp:MenuItem Value="LOGOUT"
+                        text="Logout" ToolTip="Logout"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            </div>
+
+            <div class="nav-menu-container right">
+            <asp:Menu ID="UserNavigationMenu" runat="server" Orientation="Horizontal" OnMenuItemClick="LogoutButton">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Pages/UserProfile.aspx"
+                        text="User" ToolTip="User">
+                        <asp:MenuItem NavigateUrl="~/Pages/UserFavorites.aspx"
+                            text="Favorites" ToolTip="Favorites"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Pages/UserTravelNotes.aspx"
+                            text="Travel Notes" ToolTip="Travel Notes"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Pages/UserBookingHistory.aspx"
+                            text="Booking History" ToolTip="Booking History"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Pages/UserReview.aspx"
+                            text="My reviews" ToolTip="Give Review"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Value="LOGOUT"
+                        text="Logout" ToolTip="Logout"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            </div>
+
+            <div class="nav-menu-container right">
+                <asp:Menu ID="PublicNavigationMenu" runat="server" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Pages/UserLogin.aspx"
+                            text="Login" ToolTip="Login"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Pages/UserRegistration.aspx"
+                            text="Register" ToolTip="Register"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+
+        </div>
+        <div class="content-container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
